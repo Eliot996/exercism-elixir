@@ -15,7 +15,7 @@ defmodule Darts do
     end
   end
 
-  def distance_from_center(x, y) do 
+  defp distance_from_center(x, y) do 
     :math.sqrt(:math.pow(x, 2) + :math.pow(y, 2))
   end
 end
