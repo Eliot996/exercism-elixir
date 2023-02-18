@@ -4,9 +4,7 @@ defmodule HighScore do
   def add_player(scores, name), do: Map.put(scores, name, 0)
   def add_player(scores, name, score), do: Map.put(scores, name, score)
 
-  def remove_player(scores, name) do
-    # Please implement the remove_player/2 function
-  end
+  def remove_player(scores, name), do: Map.delete(scores, name)
 
   def reset_score(scores, name) do
     # Please implement the reset_score/2 function
