@@ -6,7 +6,10 @@ defmodule HighSchoolSweetheart do
     |> String.first()
 
   def initial(name), do: 
-    (name |> first_letter() |> String.upcase()) <> "."
+    name 
+    |> first_letter() 
+    |> String.upcase()
+    |> Kernel.<>(".")
 
   def initials(full_name), do: 
     full_name 
