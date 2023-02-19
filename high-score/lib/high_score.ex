@@ -8,8 +8,12 @@ defmodule HighScore do
 
   def reset_score(scores, name), do: Map.put(scores, name, 0)
 
-  def update_score(scores, name, score) do
-    # Please implement the update_score/3 function
+  def update_score(scores, name, score) do 
+    if scores[name] != nil do
+      Map.put(scores, name, score + scores[name])
+    else
+      Map.put(scores, name, score)
+    end
   end
 
   def get_players(scores) do
